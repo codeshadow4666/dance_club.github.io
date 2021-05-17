@@ -13,9 +13,190 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <title>Dance_Website_Template</title>
+    <style>
+
+        * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+        
+                }
+        
+                html {
+                    font-size: 62.5%;
+                }
+        
+                #preloaderouterdiv {
+        
+                    display: grid;
+                    place-items: center;
+                    width: 100%;
+                    height: 100vh;
+                    z-index: 121312345435345345;
+                    background-color: black;
+                    position: fixed;
+        
+                }
+        
+                .preinnerdiv {
+        
+                    display: grid;
+                    place-items: center;
+                    width: 15rem;
+                    height: 15rem;
+        
+        
+                }
+        
+                .prering {
+                    width: 15rem;
+                    height: 15rem;
+                    position: absolute;
+                    border-left: 2px solid #211f20;
+          
+            border-right: 2px solid #90272f;
+                    border-radius: 50%;
+                    animation-name: preloader;
+                    
+                    animation-duration: 0.8s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+        
+                #preloaderh1 {
+                    color: white;
+                    font-family: 'Dancing Script', cursive;
+                }
+        
+                @keyframes preloader {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+        
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+                .h1span{
+                    font-size: 40px;
+                }
+                #span1{
+                  
+                    animation-name: doting;
+                  
+                    animation-duration: 1s;
+                   
+                    animation-iteration-count: infinite;
+                }
+                @keyframes doting
+                 {
+        
+        
+                    0% {
+                       display: none;
+        
+                      
+                    }
+                    70%{
+                        display:none;
+                        
+                    }
+        
+                    100% {
+                        color: black;
+                        display: inline-block;
+                    }
+        
+        
+                }
+                #span2{
+                  
+                    animation-name: doting;
+                    animation-duration: 1s;
+                  
+                   animation-timing-function: ease-out;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes doting
+                 {
+        
+        
+                    0% {
+                       display: none;
+        
+                      
+                    }
+                    70%{
+                        display:none;
+                        
+                    }
+        
+                    100% {
+                        color: black;
+                        display: inline-block;
+                    }
+        
+        
+                }
+                #span3{
+                  
+                    animation-name: doting;
+                  
+                    animation-duration: 1s;
+                   animation-timing-function: ease-in;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes doting
+                 {
+        
+        
+                    0% {
+                       display: none;
+        
+                      
+                    }
+                    70%{
+                        display:none;
+                        
+                    }
+        
+                    100% {
+                        color: black;
+                        display: inline-block;
+                    }
+        
+        
+                }
+            </style>
+            <!-- preloader css -->
 </head>
 
-<body>
+<body onload="preloading()">
+       <!-- .....................prelodaer ending......................  -->
+       <div id="preloaderouterdiv">
+        <div class="preinnerdiv">
+            <div class="prering">
+
+            </div>
+            <h1 id="preloaderh1">
+                Loading <span class="h1span" id="span1">.</span><span class="h1span" id="span2">.</span><span
+                    class="h1span" id="span3">.</span>
+            </h1>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- .....................prelodaer ending......................  -->
     <div id="mainhead">
         <!-- navbar starting here   -->
         <nav class="navbar navbar-expand-lg" style="background-color: #303030; color:white">
@@ -387,6 +568,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
+        <script>
+            var preloader = document.getElementById("preloaderouterdiv");
+
+function preloading(){
+    preloader.style.display = "none";
+}
+        </script>
 
 </body>
 
